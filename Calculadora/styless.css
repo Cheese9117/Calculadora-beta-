@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #2d3e50;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+}
+
+.calculator input[type="text"] {
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    color: #333;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.calculator .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.calculator .row div {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.calculator .row div:last-child {
+    margin-right: 0;
+}
+
+.calculator input[type="button"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calculator input[type="button"]:hover {
+    opacity: 0.9;
+}
+
+.calculator input[type="button"]:active {
+    transform: scale(0.95);
+}
+
+/* Estilos específicos para los botones */
+.calculator input[value="C"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.calculator input[value="/"],
+.calculator input[value="*"],
+.calculator input[value="-"],
+.calculator input[value="+"] {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.calculator input[value="="] {
+    background-color: #4caf50;
+    color: white;
+}
+
+.calculator .row:last-child input[value="0"] {
+    flex-grow: 2;
+}
+
+.calculator .row:last-child div:first-child {
+    flex-grow: 2;
+    margin-right: 5px;
+}
+
+.calculator .row:last-child div:nth-child(2) {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+
+.calculator .row:last-child div:last-child {
+    flex-grow: 1;
+}
